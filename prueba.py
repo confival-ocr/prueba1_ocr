@@ -27,21 +27,23 @@ d = pytesseract.image_to_string(Image.open("jhon5.png"))
 #-->SE DIVIDE EL STRING DE DATOS EN ITEMS PARA ALMACENAR EN UNA LISTA
 datos = d.split() 
 #print(type(datos)) retorna el tipo de dato para la variable datos ()
-print(len(datos))
+print(datos)
 
 cedula = (datos[9:10])
-print(type(cedula))
+print("Identificacion  = ", cedula)
 
-def clasificacion():
-    return 1
+nombres = (datos[12:14])
+print("Nombres = ", nombres)
+
+apellidos = (datos[10:12])
+print("Apellidos = ", apellidos)
+#print(cedula.replace('.', ''))
 
 
-
-#datos_cedula=[79912457,"alejandro","juyo"]
-#var_cedula={"numero":datos_cedula[0], "nombre":datos_cedula[1], "apellido":datos_cedula[2]}
-#print(var_cedula)
+datos_cedula=[79912457,"alejandro","juyo"]
+var_cedula={"numero":datos_cedula[0], "nombre":datos_cedula[1], "apellido":datos_cedula[2]}
+print(var_cedula)
 
 #manipulación de cadenas en Python
 #como cortar cadenas en python
 #como pegar cadenas en python 
- 
